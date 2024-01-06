@@ -38,8 +38,8 @@ const Navbar = () => {
     window.open(url)
   }
   return (
-    <div className='fixed left-0 top-0 w-full ease-in duration-300 lg:backdrop-blur-3xl z-20'>
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4'>
+    <div className='fixed ease-in left-0 top-0 w-full duration-30 z-20 '>
+      <div className='max-w-[1240px] rounded-md m-auto flex justify-between items-center p-4 backdrop-blur-3xl'>
         <Link href='/'>
           <h1 className='font-bold lg:text-3xl text-2xl text-gray-700 dark:text-white z-10'>Kirano-sharky</h1>
         </Link>
@@ -66,10 +66,12 @@ const Navbar = () => {
         <div onClick={handleNav} className='block z-10 cursor-pointer'>
           {nav ? <CloseIcon className='text-white bg-red-400 rounded-full' /> : <MenuIcon className='text-black dark:text-white lg:hidden' />}
         </div>
-        <div className={nav ? 'backdrop-blur-lg absolute top-0 left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300' : 'sm:hidden backdrop-blur-lg absolute top-[1000%] left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300'}>
+        <div className={nav ? 'dark:bg-gray-700 bg-white absolute top-0 left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300' : 'sm:hidden backdrop-blur-lg absolute top-[1500%] left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300'}>
+        <div className='w-[200px] h-[238px] left-[200px] top-0 bg-[#ed2bed] dark:bg-[#C13584] blur-[175px] z-0 absolute' />
+      <div className='w-[200px] h-[238px] right-[200px] bottom-[6rem] bg-[#31eef5] dark:bg-[#405DE6] blur-[175px] z-0 absolute' />
           <ul>
             <li>
-              <Link className='leading-[2] font-semibold text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300 text-2xl' href='/blogs'>Blogs</Link>
+              <Link className='leading-[2] font-semibold text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300 text-2xl ' href='/blogs'>Blogs</Link>
             </li>
             <li>
               <Link className='leading-[2] font-semibold text-gray-800 hover:text-gray-600 dark:text-white dark:hover:text-gray-300 text-2xl' href='/posts'>Posts</Link>
