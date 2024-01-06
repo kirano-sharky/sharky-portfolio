@@ -43,7 +43,7 @@ const Navbar = () => {
         <Link href='/'>
           <h1 className='font-bold lg:text-3xl text-2xl text-gray-700 dark:text-white z-10'>Kirano-sharky</h1>
         </Link>
-        <ul className='sm:flex hidden relative left-[200px]'>
+        <ul className='lg:flex hidden relative left-[200px]'>
           <li>
             <Link className='p-4 text-black dark:text-white hover:underline hover:text-gray-500 dark:hover:text-gray-300 ' href='/blogs'>Blogs</Link>
           </li>
@@ -61,10 +61,10 @@ const Navbar = () => {
           </div>
         </ul>
         <div>
-          <button className='relative sm:right-4 sm:hidden'>{renderThemeChanger()}</button>
+          <button className='relative lg:hidden'>{renderThemeChanger()}</button>
         </div>
-        <div onClick={handleNav} className='sm:hidden block z-10 cursor-pointer'>
-          {nav ? <CloseIcon className='text-white bg-red-400 rounded-full' /> : <MenuIcon className='text-black dark:text-white' />}
+        <div onClick={handleNav} className='block z-10 cursor-pointer'>
+          {nav ? <CloseIcon className='text-white bg-red-400 rounded-full' /> : <MenuIcon className='text-black dark:text-white lg:hidden' />}
         </div>
         <div className={nav ? 'backdrop-blur-lg absolute top-0 left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300' : 'sm:hidden backdrop-blur-lg absolute top-[1000%] left-0 right-0 bottom-0 w-full h-screen justify-center items-center text-center flex ease-in duration-300'}>
           <ul>
